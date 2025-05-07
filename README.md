@@ -9,10 +9,10 @@ A proposta foi manter **simplicidade e funcionalidade**, atendendo ao desafio t�
 | ----------------------------- | ------------------------------  | ---------------------------------------------------------- |
 | Runtime / Linguagem           | **Node.js 18 + TypeScript**     | Iteração rápida e ecossistema maduro                       |
 | HTTP client + tentativas      | **axios** + **axios-retry**     | Back-off automático com poucas linhas                      |
-| Limite de requisições         | **Redis** (token bucket)        | Garante 50 req/min no ISP                                  |
+| Limite de requisições         | **Redis**                       | Garante 50 req/min no ISP                                  |
 | Persistência                  | **MySQL 8** via **TypeORM**     | Relacional simples, joins fáceis                           |
-| Jobs em segundo plano         | `setInterval` nativo            | Mantém dependências mínimas; orquestrado via Docker        |
-| Logs                          | **pino**                        | Saída JSON, alta performance                               |
+| Jobs em segundo plano         | bullmq                          | Mantém dependências mínimas; orquestrado via Docker        |
+| Logs                          | **winston**                     | Saída JSON, alta performance                               |
 | Contêinerização               | **Docker + docker-compose**     | *One-liner* para subir tudo                                |
 
 ## Como rodar o projeto
